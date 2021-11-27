@@ -48,6 +48,12 @@ table {
 
 :root {
         --background: #f0f2f5;
+		--header: #5429CC;
+		--green: #33CC95;
+		--red: #E62E4D;
+		--title:#363F5F;
+		--text:#969CB3;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -63,6 +69,7 @@ table {
 body {
 	-webkit-font-smoothing: antialiased;
     background-color: ---background;
+	color: --text;
 }
 
 html {
@@ -83,7 +90,7 @@ h1 {
 
 p {
 	font-size: 1.6rem;
-	font-weight: 400;
+	font-weight: 400;	
 }
 
 main {
