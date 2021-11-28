@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {transparentize} from 'polished';
 
 export const Container = styled.form`
 
@@ -25,17 +26,18 @@ export const Container = styled.form`
     }
 
     button {
-        background: rgba(100,244,140,0.6);
+        background-color: ${transparentize(0.6, 'green')};
         width:100%;
         padding: 0 0.2rem;
         height: 4rem;
         border-radius: 0.4rem;
         border: 0;
         transition: filter 0.2s;
+        cursor: pointer;
+    }
 
-        &:hover {
-            filter: brightness(0.9);
-        }
+    input + button:hover {
+        background-color: ${transparentize(0.4, 'green')};
     }
 `
 export const ContainerButton = styled.div`
@@ -70,10 +72,10 @@ export const ContainerButton = styled.div`
 
     .active {
     
-        background-color: rgba( 244, 104, 100, 0.5);
+        background-color: ${transparentize(0.9, 'red')};
     
         &:first-child { 
-            background-color: rgba( 100, 244, 100, 0.5);
+            background-color: ${transparentize(0.9, 'green')};
         }
     }
     `
