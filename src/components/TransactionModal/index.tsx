@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import Modal from 'react-modal';
 import { Container, ContainerButton } from "./styles";
 import closeModal from '../../assets/close.svg';
 import incomeModal from '../../assets/income.svg';
 import outcomeModal from '../../assets/outcome.svg';
+import { api } from "../../services/api";
 
 interface TransactionModalProps {
     isOpen: boolean;
@@ -12,7 +13,23 @@ interface TransactionModalProps {
 
 export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps ) {
 
+    const [title, setTitle ] = useState('');
+    const[value, setValue] = useState(0);
+    const [category, setCategory] = useState('');
     const [type, setType] = useState('');
+    
+    function handleSubmitForms(event: FormEvent) {
+        event.preventDefault();
+
+        const data = {
+            title,
+            value,
+            category,
+            type
+        };
+
+        api.post('/transactions', data)
+    }
 
     return (
         <Modal 
@@ -25,12 +42,18 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                 <img src={closeModal} alt="" />
             </button>
 
-            <Container>
+            <Container onSubmit = {handleSubmitForms}>
                 <h2>Cadastrar Transação</h2>
 
-                <input type="text" placeholder="Título" />
+                <input type="text" placeholder="Título"
+                value = {title}
+                onChange = {event => setTitle(event.target.value)}
+                />
 
-                <input type="number" placeholder="Valor"/>
+                <input type="number" placeholder="Valor"
+                value = {value}
+                onChange = {event => setValue(Number(event.target.value))}
+                />
 
                 <ContainerButton>
                     <button
@@ -51,9 +74,12 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                     </button>
                 </ContainerButton>
 
-                <input type="text" placeholder="Categoria" />
+                <input type="text" placeholder="Categoria" 
+                value = {category}
+                onChange = {event => setCategory(event.target.value)}
+                />
                 
-                <button type="button">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </Container>
         </Modal>
     )

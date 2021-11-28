@@ -26,5 +26,13 @@ export const Container = styled.div`
                 color: #363F5F;
             }
         }
+
+        .withdraw {
+            color: red;
+        }
+
+        .deposit {
+            color: green;
+        }
     }
 `

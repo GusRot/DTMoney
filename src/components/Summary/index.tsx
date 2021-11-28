@@ -16,14 +16,14 @@ export function Summary() {
             </div>   
             <div>
                 <header>
-                    <p>Entradas</p>
+                    <p>Saídas</p>
                     <img src={outcomeImg} alt="" />
                 </header>
                 <h2>R$ -1.000,00</h2>
             </div>
             <div>
                 <header>
-                    <p>Entradas</p>
+                    <p>Total</p>
                     <img src={totalImg} alt="" />
                 </header>
                 <h2>R$ 16.000,00</h2>
