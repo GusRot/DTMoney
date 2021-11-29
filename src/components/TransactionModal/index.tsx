@@ -1,10 +1,10 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useContext, useState } from "react";
 import Modal from 'react-modal';
 import { Container, ContainerButton } from "./styles";
 import closeModal from '../../assets/close.svg';
 import incomeModal from '../../assets/income.svg';
 import outcomeModal from '../../assets/outcome.svg';
-import { api } from "../../services/api";
+import { TransactionsContext } from "../../TransactionsContent";
 
 interface TransactionModalProps {
     isOpen: boolean;
@@ -13,22 +13,29 @@ interface TransactionModalProps {
 
 export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps ) {
 
+    const { createTransaction } = useContext(TransactionsContext)
+
     const [title, setTitle ] = useState('');
-    const[value, setValue] = useState(0);
+    const[amount, setAmount] = useState(0);
     const [category, setCategory] = useState('');
     const [type, setType] = useState('');
     
-    function handleSubmitForms(event: FormEvent) {
+    async function handleSubmitForms(event: FormEvent) { 
+        
         event.preventDefault();
-
-        const data = {
+    
+        await createTransaction({
             title,
-            value,
+            amount,
             category,
             type
-        };
+        })
 
-        api.post('/transactions', data)
+        setTitle('');
+        setAmount(0);
+        setCategory('');
+        setType('');
+        onRequestClose();
     }
 
     return (
@@ -51,8 +58,8 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                 />
 
                 <input type="number" placeholder="Valor"
-                value = {value}
-                onChange = {event => setValue(Number(event.target.value))}
+                value = {amount}
+                onChange = {event => setAmount(Number(event.target.value))}
                 />
 
                 <ContainerButton>
@@ -69,7 +76,7 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                     type = "button"
                     className = {type === 'withdraw' ? 'active' : ''}
                     onClick = {() => {setType('withdraw')}}>
-                        <span>Entrada</span>
+                        <span>Saida</span>
                         <img src={outcomeModal} alt="Saídas" />
                     </button>
                 </ContainerButton>
