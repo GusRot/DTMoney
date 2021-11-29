@@ -18,6 +18,7 @@ export const Container = styled.header`
         }
 
         button {
+            margin-left:2rem;
             height: 5rem;
             width: 20rem;
             border: none;

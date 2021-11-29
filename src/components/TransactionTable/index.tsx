@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { TransactionsContext } from '../../TransactionsContent';
 import {Container} from "./styles";
-
+import { BiTrash } from 'react-icons/bi';
 
 export function TransactionTable() {
 
@@ -16,6 +16,7 @@ export function TransactionTable() {
                         <th>Valor</th>
                         <th>Categoria</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -32,6 +33,9 @@ export function TransactionTable() {
                             }).format(transaction.amount)}</td>
                         <td>{transaction.category}</td>
                         <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt))}</td>
+                        <td><button type = 'button'>
+                            <BiTrash className = 'trash-icon'/>
+                        </button></td>
                     </tr>))}
                 </tbody>
             </table>

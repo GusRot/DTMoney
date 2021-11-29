@@ -37,7 +37,8 @@ export function TransactionsProvider({children}: TransactionsProviderProps) {
 
       const response =  await api.post('/transactions', {
           ...transactionInput, 
-            createdAt: new Date()
+            createdAt: new Date(),
+            active: 'yes'
         });
 
       const {transaction} = response.data; 
@@ -46,6 +47,15 @@ export function TransactionsProvider({children}: TransactionsProviderProps) {
           ...transactions, transaction
       ])
     }
+
+    // async function removeTransaction(transactionInput: Transaction) {
+
+    //     const response =  await api.post('/transactions', transactionInput);
+  
+    //     const {transaction} = response.data; 
+  
+    //     setTransactions([...transactions])
+    //   }
 
     return (
         <TransactionsContext.Provider value = {{transactions, createTransaction}}>

@@ -16,9 +16,9 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
     const { createTransaction } = useContext(TransactionsContext)
 
     const [title, setTitle ] = useState('');
-    const[amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(0);
     const [category, setCategory] = useState('');
-    const [type, setType] = useState('');
+    const [type, setType] = useState('deposit');
     
     async function handleSubmitForms(event: FormEvent) { 
         
@@ -34,9 +34,21 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
         setTitle('');
         setAmount(0);
         setCategory('');
-        setType('');
+        setType('deposit');
         onRequestClose();
     }
+
+    
+    // async function handleRemoveItem() { 
+    //     const { createTransaction } = useContext(TransactionsContext)
+    
+    //     await createTransaction({
+    //         title,
+    //         amount,
+    //         category,
+    //         type
+    //     })
+    // }
 
     return (
         <Modal 
@@ -53,6 +65,8 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                 <h2>Cadastrar Transação</h2>
 
                 <input type="text" placeholder="Título"
+                minLength = {2}
+                required
                 value = {title}
                 onChange = {event => setTitle(event.target.value)}
                 />
@@ -82,6 +96,8 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
                 </ContainerButton>
 
                 <input type="text" placeholder="Categoria" 
+                minLength = {2}
+                required
                 value = {category}
                 onChange = {event => setCategory(event.target.value)}
                 />

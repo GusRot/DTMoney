@@ -6,25 +6,28 @@ import { createServer, Model } from "miragejs";
 
 const apiObjects = [{
   id: 1,
-  title: 'DEVV',  
+  title: 'Teste',  
   amount: 200,
   type: 'withdraw',
   category: 'food',
-  createdAt: '2012-02-12'
+  createdAt: '2021-02-12',
+  active: 'yes'
 }, {
   id: 2,
-  title: 'DEVV2',  
+  title: 'Teste2',  
   amount: 200,
   type: 'deposit',
   category: 'food',
-  createdAt: '2012-02-12'
+  createdAt: '2021-02-12',
+  active: 'yes'
 }, {
   id: 3,
-  title: 'DEVV3',  
+  title: 'Teste3',  
   amount: 200,
   type: 'deposit',
   category: 'food',
-  createdAt: '2012-02-12'
+  createdAt: '2021-02-12',
+  active: 'yes'
 }]
 
 createServer({

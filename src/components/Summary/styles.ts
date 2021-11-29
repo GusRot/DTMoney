@@ -10,7 +10,7 @@ export const Container = styled.div`
     margin-top: -3.2rem;
     
     div{ 
-        padding: 2.5rem 3.2rem;
+        padding: 2rem 2.2rem;
         background-color: white;
         height:14rem;
         max-width: 35rem;
@@ -19,11 +19,14 @@ export const Container = styled.div`
         header {
             display:flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         h2 {
             font-weight: 600;
             font-size: 3.4rem;
+            text-align: center;
+            word-break: break-all;
         }
 
         &:last-child {
@@ -31,7 +34,22 @@ export const Container = styled.div`
         }
         
     }
-        
+    
+    @media(max-width:790px) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div{ 
+        height:14rem;
+        max-width: 35rem;
+        width: 40%;
+        }
+    }
+
+    @media(max-width:500px) {
+        flex-direction: column;
+
+    }
     `
 
 export const ContainerButton = styled.div`

@@ -72,10 +72,10 @@ export const ContainerButton = styled.div`
 
     .active {
     
-        background-color: ${transparentize(0.9, 'red')};
+        background-color: ${transparentize(0.8, 'red')};
     
         &:first-child { 
-            background-color: ${transparentize(0.9, 'green')};
+            background-color: ${transparentize(0.7, 'green')};
         }
     }
     `

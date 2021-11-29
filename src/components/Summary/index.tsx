@@ -25,14 +25,13 @@ export function Summary() {
         withdraws: 0,
         total: 0
     })
-    
 
     return(
         <>
-            <ContainerButton>
+            {/* <ContainerButton>
                 <button>Mostrar Valores</button>
             </ContainerButton>
-            
+             */}
             <Container>
                 <div>
                     <header>
@@ -51,8 +50,8 @@ export function Summary() {
                         <p>Saídas</p>
                         <img src={outcomeImg} alt="" />
                     </header>
-                    <h2>
-                        - {new Intl.NumberFormat('pt-BR', {
+                    <h2> 
+                        {new Intl.NumberFormat('pt-BR', {
                             style: 'currency',
                             currency: 'BRL'
                         }).format(summary.withdraws)}

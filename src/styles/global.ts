@@ -68,7 +68,7 @@ table {
 
 body {
 	-webkit-font-smoothing: antialiased;
-    background-color: ---background;
+    background-color: #F5F5F5;
 	color: --text;
 }
 
@@ -133,6 +133,18 @@ main {
 
 	&:hover {
 		filter: brightness(0.9);
+	}
+}
+
+.trash-icon {
+	display: flex;
+	align-items: center;
+	color: red;
+	cursor: pointer;
+	transition: transform 0.2s;
+
+	&:hover {
+		transform: translateY(-2px);
 	}
 }
 
