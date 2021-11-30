@@ -68,7 +68,7 @@ table {
 
 body {
 	-webkit-font-smoothing: antialiased;
-    background-color: ---background;
+    background-color: #F5F5F5;
 	color: --text;
 }
 
@@ -99,5 +99,53 @@ main {
 	margin: 0 auto;
 }
     
-    
+.react-modal-overlay {
+        position: fixed;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+		background-color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.5);
+}
+
+.react-modal-content {
+	width:100%;
+	max-width:58rem;
+	position: relative;
+	border-radius:0.7rem;
+	background-color:white;
+	padding: 3rem;
+
+}
+
+.react-modal-close {
+	position:absolute;
+	right: 2rem;
+	top: 2rem;
+	border: 0;
+	background: transparent;
+	transition: filter 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		filter: brightness(0.9);
+	}
+}
+
+.trash-icon {
+	display: flex;
+	align-items: center;
+	color: red;
+	cursor: pointer;
+	transition: transform 0.2s;
+
+	&:hover {
+		transform: translateY(-2px);
+	}
+}
+
 `

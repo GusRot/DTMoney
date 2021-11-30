@@ -1,13 +1,11 @@
-import { useEffect } from "react";
-import { api } from "../../services/api";
+import React, { useContext } from 'react';
+import { TransactionsContext } from '../../TransactionsContent';
 import {Container} from "./styles";
+import { BiTrash } from 'react-icons/bi';
 
 export function TransactionTable() {
 
-useEffect( () => {
-    api.get('transactions').then(response => console.log(response.data))
-}, []);
-
+    const {transactions} = useContext(TransactionsContext);
 
     return(
         <Container>
@@ -18,34 +16,27 @@ useEffect( () => {
                         <th>Valor</th>
                         <th>Categoria</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>Dev Web</td>
-                        <td>R$ 1200,00</td>
-                        <td>DESENVOLVIMENTO</td>
-                        <td>22/22/4421</td>
-                    </tr>
-                    <tr>
-                        <td>Dev Web</td>
-                        <td>R$ 1200,00</td>
-                        <td>DESENVOLVIMENTO</td>
-                        <td>22/22/4421</td>
-                    </tr>
-                    <tr>
-                        <td>Dev Web</td>
-                        <td>R$ 1200,00</td>
-                        <td>DESENVOLVIMENTO</td>
-                        <td>22/22/4421</td>
-                    </tr>
-                    <tr>
-                        <td>Dev Web</td>
-                        <td>R$ 1200,00</td>
-                        <td>DESENVOLVIMENTO</td>
-                        <td>22/22/4421</td>
-                    </tr>
+                    {transactions.map((transaction) => (
+                    <tr key = {transaction.id}>
+                        <td>{transaction.title}</td>
+                        <td 
+                         className = {'withdraw' === transaction.type ? 'withdraw' : 'deposit'}
+                        >
+                            {new Intl.NumberFormat('pt-BR', {
+                                style: 'currency',
+                                currency: 'BRL'
+                            }).format(transaction.amount)}</td>
+                        <td>{transaction.category}</td>
+                        <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt))}</td>
+                        <td><button type = 'button'>
+                            <BiTrash className = 'trash-icon'/>
+                        </button></td>
+                    </tr>))}
                 </tbody>
             </table>
         </Container>
