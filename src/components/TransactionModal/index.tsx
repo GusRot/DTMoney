@@ -38,18 +38,6 @@ export function TransactionModal({isOpen, onRequestClose}: TransactionModalProps
         onRequestClose();
     }
 
-    
-    // async function handleRemoveItem() { 
-    //     const { createTransaction } = useContext(TransactionsContext)
-    
-    //     await createTransaction({
-    //         title,
-    //         amount,
-    //         category,
-    //         type
-    //     })
-    // }
-
     return (
         <Modal 
         isOpen = {isOpen}
