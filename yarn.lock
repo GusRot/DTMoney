@@ -3381,6 +3381,11 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
+"chance@^1.0.4":
+  "integrity" "sha512-v7fi5Hj2VbR6dJEGRWLmJBA83LJMS47pkAbmROFxHWd9qmE1esHRZW8Clf1Fhzr3rjxnNZVCjOEv/ivFxeIMtg=="
+  "resolved" "https://registry.npmjs.org/chance/-/chance-1.1.8.tgz"
+  "version" "1.1.8"
+
 "char-regex@^1.0.2":
   "integrity" "sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw=="
   "resolved" "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz"
@@ -5152,6 +5157,14 @@
   "resolved" "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz"
   "version" "1.3.0"
 
+<<<<<<< HEAD
+=======
+"fake-xml-http-request@^1.6.0":
+  "integrity" "sha512-99XPwwSg89BfzPuv4XCpZxn3EbauMCgAQCxq9MzrvS6DFD73OON6AnUTicL4A0HZtYMBwCZBWVnRqGjZDgQkTg=="
+  "resolved" "https://registry.npmjs.org/fake-xml-http-request/-/fake-xml-http-request-1.6.0.tgz"
+  "version" "1.6.0"
+
+>>>>>>> 78f7465ef38fb35572ce89b21da628a6bf0368ff
 "fake-xml-http-request@^2.1.2":
   "integrity" "sha512-HaFMBi7r+oEC9iJNpc3bvcW7Z7iLmM26hPDmlb0mFwyANSsOQAtJxbdWsXITKOzZUyMYK0zYCv3h5yDj9TsiXg=="
   "resolved" "https://registry.npmjs.org/fake-xml-http-request/-/fake-xml-http-request-2.1.2.tgz"
@@ -7415,7 +7428,11 @@
   "resolved" "https://registry.npmjs.org/lodash.values/-/lodash.values-4.3.0.tgz"
   "version" "4.3.0"
 
+<<<<<<< HEAD
 "lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@^4.17.5", "lodash@>=3.5 <5":
+=======
+"lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@^4.17.4", "lodash@^4.17.5", "lodash@>=3.5 <5":
+>>>>>>> 78f7465ef38fb35572ce89b21da628a6bf0368ff
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -7718,6 +7735,19 @@
     "minipass" "^3.0.0"
     "yallist" "^4.0.0"
 
+<<<<<<< HEAD
+=======
+"mirage.js@^1.0.0":
+  "integrity" "sha1-5iEKMYWff6eZE7LPSeoOh5lY7cM="
+  "resolved" "https://registry.npmjs.org/mirage.js/-/mirage.js-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "chance" "^1.0.4"
+    "lodash" "^4.17.4"
+    "pretender" "^1.4.2"
+    "slash" "^1.0.0"
+
+>>>>>>> 78f7465ef38fb35572ce89b21da628a6bf0368ff
 "miragejs@^0.1.42":
   "integrity" "sha512-35Gl2Pubkj/9Xk/D5/JcKJyspPWCNcpMkrlEpP0ArjQ4wKINQaFIgg5R/LW5v/yvsLpMjf9tzZuHtO3NDZeZow=="
   "resolved" "https://registry.npmjs.org/miragejs/-/miragejs-0.1.42.tgz"
@@ -9272,6 +9302,17 @@
   "resolved" "https://registry.npmjs.org/prepend-http/-/prepend-http-1.0.4.tgz"
   "version" "1.0.4"
 
+<<<<<<< HEAD
+=======
+"pretender@^1.4.2":
+  "integrity" "sha1-d9HkKsjGspj1zUNTSodkXfA124w="
+  "resolved" "https://registry.npmjs.org/pretender/-/pretender-1.6.1.tgz"
+  "version" "1.6.1"
+  dependencies:
+    "fake-xml-http-request" "^1.6.0"
+    "route-recognizer" "^0.3.3"
+
+>>>>>>> 78f7465ef38fb35572ce89b21da628a6bf0368ff
 "pretender@^3.4.7":
   "integrity" "sha512-jkPAvt1BfRi0RKamweJdEcnjkeu7Es8yix3bJ+KgBC5VpG/Ln4JE3hYN6vJym4qprm8Xo5adhWpm3HCoft1dOw=="
   "resolved" "https://registry.npmjs.org/pretender/-/pretender-3.4.7.tgz"
@@ -10485,6 +10526,11 @@
   "integrity" "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="
   "resolved" "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
   "version" "1.0.5"
+
+"slash@^1.0.0":
+  "integrity" "sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU="
+  "resolved" "https://registry.npmjs.org/slash/-/slash-1.0.0.tgz"
+  "version" "1.0.0"
 
 "slash@^3.0.0":
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="

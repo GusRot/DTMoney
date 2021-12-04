@@ -3,13 +3,11 @@ import { Summary } from "../Summary";
 import { TransactionTable } from "../TransactionTable";
 import React from "react";
 
-
 export function Dashboard() {
-
-    return(
+    return (
         <Container>
-            <Summary/>
-            <TransactionTable/>
+            <Summary />
+            <TransactionTable />
         </Container>
-    )
+    );
 }

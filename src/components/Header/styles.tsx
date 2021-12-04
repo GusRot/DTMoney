@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    background-color: #5429cc;
+    background-color:#5429CC;
     height: 21rem;
 
     .container {
@@ -18,13 +18,12 @@ export const Container = styled.header`
         }
 
         button {
-            margin-left: 2rem;
             height: 5rem;
             width: 20rem;
             border: none;
             padding: 0.5rem 2rem;
             border-radius: 0.5rem;
-            background-color: #6933ff;
+            background-color: #6933FF;
             color: white;
             cursor: pointer;
             transition: filter 0.2s;
@@ -33,5 +32,8 @@ export const Container = styled.header`
                 filter: brightness(0.9);
             }
         }
+        
     }
-`;
+
+
+`

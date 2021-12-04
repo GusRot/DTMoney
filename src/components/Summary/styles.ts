@@ -1,31 +1,30 @@
 import styled from "styled-components";
-import {transparentize} from 'polished';
+import { transparentize } from "polished";
 
 export const Container = styled.div`
-
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     gap: 3rem;
     margin-top: -3.2rem;
-    
-    div{ 
+
+    div {
         padding: 2rem 2.2rem;
         background-color: white;
-        height:14rem;
+        height: 14rem;
         max-width: 35rem;
         width: 30%;
-        position:relative;
-        
+        position: relative;
+
         header {
-            display:flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom:1rem;
+            margin-bottom: 1rem;
         }
-        
+
         h2 {
-            display:none;
+            display: none;
             font-weight: 600;
             font-size: 3.4rem;
             text-align: center;
@@ -33,52 +32,50 @@ export const Container = styled.div`
         }
 
         span {
-            position:absolute;
-            bottom:0;
-            left:0;
-            right:0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             top: 5.2rem;
             font-size: 5.5rem;
             text-align: center;
         }
 
         &:last-child {
-            background-color:#33CC95;
+            background-color: #33cc95;
         }
 
         .active {
-            display:inline;
+            display: inline;
         }
 
         .none {
             display: none;
         }
-        
     }
-    
-    @media(max-width:790px) {
+
+    @media (max-width: 790px) {
         flex-wrap: wrap;
         justify-content: center;
 
-        div{ 
-        height:14rem;
-        max-width: 35rem;
-        width: 40%;
+        div {
+            height: 14rem;
+            max-width: 35rem;
+            width: 40%;
         }
     }
 
-    @media(max-width:500px) {
+    @media (max-width: 500px) {
         flex-direction: column;
-
     }
-    `
+`;
 
 export const ContainerButton = styled.div`
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-top: -7.2rem;
-    padding-bottom:4rem;
+    padding-bottom: 4rem;
 
     button {
         height: 5rem;
@@ -86,7 +83,7 @@ export const ContainerButton = styled.div`
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 0.5rem;
-        background-color: ${transparentize(0.7,'grey')};
+        background-color: ${transparentize(0.7, "grey")};
         color: white;
         cursor: pointer;
         transition: filter 0.2s;
@@ -95,4 +92,4 @@ export const ContainerButton = styled.div`
             filter: brightness(0.9);
         }
     }
-`
+`;
