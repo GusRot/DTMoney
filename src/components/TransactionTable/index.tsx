@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
-import { TransactionsContext } from '../../TransactionsContent';
-import {Container} from "./styles";
-import { BiTrash } from 'react-icons/bi';
+import React, { useContext } from "react";
+import { TransactionsContext } from "../../TransactionsContent";
+import { Container } from "./styles";
+import { BiTrash } from "react-icons/bi";
 
 export function TransactionTable() {
+    const { transactions } = useContext(TransactionsContext);
 
-    const {transactions} = useContext(TransactionsContext);
-
-    return(
+    return (
         <Container>
             <table>
                 <thead>
@@ -22,23 +21,35 @@ export function TransactionTable() {
 
                 <tbody>
                     {transactions.map((transaction) => (
-                    <tr key = {transaction.id}>
-                        <td>{transaction.title}</td>
-                        <td 
-                         className = {'withdraw' === transaction.type ? 'withdraw' : 'deposit'}
-                        >
-                            {new Intl.NumberFormat('pt-BR', {
-                                style: 'currency',
-                                currency: 'BRL'
-                            }).format(transaction.amount)}</td>
-                        <td>{transaction.category}</td>
-                        <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt))}</td>
-                        <td><button type = 'button'>
-                            <BiTrash className = 'trash-icon'/>
-                        </button></td>
-                    </tr>))}
+                        <tr key={transaction.id}>
+                            <td>{transaction.title}</td>
+                            <td
+                                className={
+                                    "withdraw" === transaction.type
+                                        ? "withdraw"
+                                        : "deposit"
+                                }
+                            >
+                                {new Intl.NumberFormat("pt-BR", {
+                                    style: "currency",
+                                    currency: "BRL",
+                                }).format(transaction.amount)}
+                            </td>
+                            <td>{transaction.category}</td>
+                            <td>
+                                {new Intl.DateTimeFormat("pt-BR").format(
+                                    new Date(transaction.createdAt)
+                                )}
+                            </td>
+                            <td>
+                                <button type="button">
+                                    <BiTrash className="trash-icon" />
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </Container>
-    )
+    );
 }
