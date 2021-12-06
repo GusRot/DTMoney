@@ -5,6 +5,7 @@ import { BiTrash } from "react-icons/bi";
 
 export function TransactionTable() {
     const { transactions } = useContext(TransactionsContext);
+    const { deleteTransaction } = useContext(TransactionsContext);
 
     return (
         <Container>
@@ -20,34 +21,44 @@ export function TransactionTable() {
                 </thead>
 
                 <tbody>
-                    {transactions.map((transaction) => (
-                        <tr key={transaction.id}>
-                            <td>{transaction.title}</td>
-                            <td
-                                className={
-                                    "withdraw" === transaction.type
-                                        ? "withdraw"
-                                        : "deposit"
-                                }
-                            >
-                                {new Intl.NumberFormat("pt-BR", {
-                                    style: "currency",
-                                    currency: "BRL",
-                                }).format(transaction.amount)}
-                            </td>
-                            <td>{transaction.category}</td>
-                            <td>
-                                {new Intl.DateTimeFormat("pt-BR").format(
-                                    new Date(transaction.createdAt)
-                                )}
-                            </td>
-                            <td>
-                                <button type="button">
-                                    <BiTrash className="trash-icon" />
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
+                    {transactions
+                        .slice(0)
+                        .reverse()
+                        .map((transaction) => (
+                            <tr key={transaction.id}>
+                                <td>{transaction.title}</td>
+                                <td
+                                    className={
+                                        "withdraw" === transaction.type
+                                            ? "withdraw"
+                                            : "deposit"
+                                    }
+                                >
+                                    {new Intl.NumberFormat("pt-BR", {
+                                        style: "currency",
+                                        currency: "BRL",
+                                    }).format(transaction.amount)}
+                                </td>
+                                <td>{transaction.category}</td>
+                                <td>
+                                    {new Intl.DateTimeFormat("pt-BR").format(
+                                        new Date(transaction.createdAt)
+                                    )}
+                                </td>
+                                <td>
+                                    <button type="button">
+                                        <BiTrash
+                                            className="trash-icon"
+                                            onClick={() =>
+                                                deleteTransaction(
+                                                    transaction.id
+                                                )
+                                            }
+                                        />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
                 </tbody>
             </table>
         </Container>
