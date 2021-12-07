@@ -28,12 +28,15 @@ export function Summary() {
     );
 
     const [showAmount, setShowAmount] = useState("");
+    const [showHide, setShowHide] = useState("Mostrar Valores");
 
     function showAmounts() {
         if (showAmount !== "active") {
             setShowAmount("active");
+            setShowHide("Ocultar valores");
         } else {
             setShowAmount("");
+            setShowHide("Mostrar Valores");
         }
     }
 
@@ -41,7 +44,7 @@ export function Summary() {
         <>
             <ContainerButton>
                 <button type="button" onClick={showAmounts}>
-                    Mostrar Valores
+                    {showHide}
                 </button>
             </ContainerButton>
 

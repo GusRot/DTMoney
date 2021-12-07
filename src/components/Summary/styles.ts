@@ -36,8 +36,8 @@ export const Container = styled.div`
             bottom: 0;
             left: 0;
             right: 0;
-            top: 5.2rem;
-            font-size: 5.5rem;
+            top: 6rem;
+            font-size: 4rem;
             text-align: center;
         }
 

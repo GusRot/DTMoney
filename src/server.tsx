@@ -7,8 +7,7 @@ const apiObjects = [
         amount: 200,
         type: "withdraw",
         category: "comida",
-        createdAt: "2021-02-12",
-        active: "yes",
+        createdAt: "07/12/2021",
     },
     {
         id: 2,
@@ -16,8 +15,7 @@ const apiObjects = [
         amount: 200,
         type: "deposit",
         category: "trabalho",
-        createdAt: "2021-02-12",
-        active: "yes",
+        createdAt: "07/12/2021",
     },
     {
         id: 3,
@@ -25,8 +23,7 @@ const apiObjects = [
         amount: 200,
         type: "deposit",
         category: "renda passiva",
-        createdAt: "2021-02-12",
-        active: "yes",
+        createdAt: "07/12/2021",
     },
 ];
 
