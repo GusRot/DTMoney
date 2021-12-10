@@ -1,10 +1,7 @@
 import logoImg from "../../assets/logo.svg";
 import { Container } from "./styles";
 import React from "react";
-
-interface HeaderProps {
-    onOpenTransactionModal: () => void;
-}
+import { HeaderProps } from "../Types/Transactions";
 
 export function Header({ onOpenTransactionModal }: HeaderProps) {
     return (

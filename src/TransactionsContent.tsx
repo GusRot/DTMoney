@@ -1,27 +1,12 @@
 import moment from "moment";
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import {
+    Transaction,
+    TransactionInput,
+    TransactionsContextData,
+    TransactionsProviderProps,
+} from "./components/Types/Transactions";
 import { api } from "./services/api";
-
-interface Transaction {
-    id: number;
-    title: string;
-    amount: number;
-    type: string;
-    category: string;
-    createdAt: string;
-}
-
-type TransactionInput = Omit<Transaction, "id" | "createdAt">;
-
-interface TransactionsProviderProps {
-    children: ReactNode;
-}
-
-interface TransactionsContextData {
-    transactions: Transaction[];
-    createTransaction: (transaction: TransactionInput) => Promise<void>;
-    deleteTransaction: (id: number) => Promise<void>;
-}
 
 export const TransactionsContext = createContext<TransactionsContextData>(
     {} as TransactionsContextData

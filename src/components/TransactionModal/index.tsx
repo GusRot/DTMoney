@@ -5,11 +5,7 @@ import closeModal from "../../assets/close.svg";
 import incomeModal from "../../assets/income.svg";
 import outcomeModal from "../../assets/outcome.svg";
 import { TransactionsContext } from "../../TransactionsContent";
-
-interface TransactionModalProps {
-    isOpen: boolean;
-    onRequestClose: () => void;
-}
+import { TransactionModalProps } from "../Types/Transactions";
 
 export function TransactionModal({
     isOpen,
