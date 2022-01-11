@@ -25,7 +25,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         const cache = JSON.parse(localStorage.getItem("transactions") || "{}");
 
         if (cache.length) {
-            console.log("existe");
             createCache(cache);
         }
     }, []);
