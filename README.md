@@ -3,11 +3,17 @@
 <a href="#">
 <img alt="Repository size" src="https://img.shields.io/github/repo-size/GusRot/DTMoney">
 </a>
-<a href="https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)">
+<a href="https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)" target="blank">
   <img alt="Figma" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 <a href="#">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GusRot/DTMoney?color=%2304D361">
+</a>
+<a href="#">
+<img alt="Wakatime" src="https://wakatime.com/badge/user/04f1420e-9d57-410a-bdc7-d768fb237a52/project/45996bd5-c7c9-4944-87e6-96b359fda2a1.svg">
+</a>
+<a href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt" target="blank">
+<img alt="LicenseMIT" src="https://badgen.net/github/license/micromatch/micromatch">
 </a>
 </div>
 
@@ -18,9 +24,9 @@ Apesar de ser um projeto simples, ele pode trazer diversos benefícios para a su
 ### Desenvolvimento:
 No desenvolvimento, foram utilizados diversos ferramentais técnicos: Function Components como padrão, Context API para controlar as transações, get/post de API na tabela de Transações (Simulada uma API Fake com MirageJS), com a utilização do Storage para salvar as alterações ao recarregar a página. Tudo isso com Typescript para um maior controle das variáveis na aplicação.
 
-### Outras bibliotecas utilizadas:
+### Outras bibliotecas utilizadas
 
--  `axios`  `react-icons`  `moment`  `polished`  `react-modal` 
+- `axios`  `react-icons`  `moment`  `polished`  `react-modal`
 
 ## Build
 
@@ -35,7 +41,7 @@ Você também pode rodar na sua máquina:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts you can run:
+## Available Scripts you can run
 
 `yarn install`
 `yarn start`
