@@ -21,10 +21,12 @@
 
 Control your finances through this application, add your cash flow and easily have a view of everything with a friendly interface.
 Despite being a simple project, it can bring several benefits to your financial health. We all know the importance of financial organization, but few actually do it.
+Access the Mobile version through [this repository](https://github.com/GusRot/MobileMoney)
 
 ### Development
 
-In development, several technical tools were used: Function Components as standard, Context API to control transactions, API get/post in the Transactions table (Simulated a Fake API with MirageJS), with the use of Storage to save changes when reloading the page. All this with Typescript for greater control over the variables in the application.
+In development, several technical tools were used: Function Components as standard, Context API to control transactions, API get/post in the Transactions table (Simulated a Fake API with MirageJS), with the use of Storage to save changes when reloading the page. All this with Typescript for greater control over the variables in the application. 
+Also developed a mobile apk with React Native.
 
 ### Used in development
 
